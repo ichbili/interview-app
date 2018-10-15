@@ -1,0 +1,53 @@
+{
+  hello
+}
+RESPONSE:
+{
+  "data": {
+    "hello": "hello"
+  }
+}
+--------------------------------
+mutation {
+  signUp(
+    firstname: "momo9l"
+    lastname: "koo"
+    email: "mkjk@gmail.com"
+    password: "mmo"
+  ) {
+    token
+  }
+} 
+RESPONSE:
+{
+  "data": {
+    "signUp": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOiJtb21vOWwiLCJsYXN0bmFtZSI6ImtvbyIsImVtYWlsIjoibWtqa0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRpY2FYdC54VXRYdWNST0oyOWU1alguNHk3RHV1azhnME9OVHRmbE0xczBPVVk2OS5CZDUxbSIsImNyZWF0ZWRBdCI6IjIwMTgtMTAtMTNUMTI6MzI6MTkuNDY3WiIsImlkIjo0LCJpYXQiOjE1Mzk0MzM5Mzl9.CvzRy0K5ceUuBQ8NbQvJQffO2qsV0iCcbKUbSw5otX8"
+    }
+  }
+}
+--------------------------------
+mutation {
+  login(
+    email: "mkjk@gmail.com"
+    password: "mmo"
+  ) {
+    token
+    user {
+      firstname
+    }
+  }
+}
+RESPONSE:
+{
+  "data": {
+    "login": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RuYW1lIjoibW9tbzlsIiwibGFzdG5hbWUiOiJrb28iLCJlbWFpbCI6Im1ramtAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkaWNhWHQueFV0WHVjUk9KMjllNWpYLjR5N0R1dWs4ZzBPTlR0ZmxNMXMwT1VZNjkuQmQ1MW0iLCJjcmVhdGVkQXQiOiIyMDE4LTEwLTEzVDEyOjMyOjE5LjQ2N1oiLCJ1cGRhdGVkQXQiOm51bGwsImRlbGV0ZWRBdCI6bnVsbCwiaWF0IjoxNTM5NDM0MzYwfQ.9lqRy0lc69EsCJ3SVjHQUSFCYLMOwbfBWr7qkax-4Po",
+      "user": {
+        "firstname": "momo9l"
+      }
+    }
+  }
+}
+-------------------------
+"babel-loader": "^7.1.2",
